@@ -80,5 +80,6 @@ button{
 .list-group-item{
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 10px;
 }
 </style>
