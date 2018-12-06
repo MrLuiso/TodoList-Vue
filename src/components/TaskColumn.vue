@@ -1,10 +1,6 @@
 <template>
     <div class="taskColumn">
         <h2 class="title">{{columnTitle}}</h2>
-        <task-uncheked taskTitle="Title of Task" buttonText="Delete"></task-uncheked>
-        <task-uncheked taskTitle="Title of Task" buttonText="Delete"></task-uncheked>
-        <task-uncheked taskTitle="Title of Task" buttonText="Delete"></task-uncheked>
-        <task-uncheked taskTitle="Title of Task" buttonText="Delete"></task-uncheked>
     </div>
 </template>
 

@@ -1,14 +1,11 @@
 <template>
     <div class="taskInput">
-        <b-input-group size="lg" class="inputGroup">
-            <b-form-input placeholder="Input your task"  
-                        v-model="taskTitle"
-                        type="text">
-            </b-form-input>
-            <b-input-group-append>
-                <b-button @click="displayText" variant="outline-success">Add Task</b-button>
-            </b-input-group-append>
-        </b-input-group>
+        <input placeholder="Input your task"
+                :value="newTodo"
+                @change="getTodo"
+                type="text">
+        <b-button @click="addTodo" >Add Task</b-button>
+        
     </div>
 </template>
 
@@ -16,8 +13,17 @@
 export default {
     name: 'TaskInput',
     methods: {
-        displayText: function(event) {
-            alert(this.$data.taskTitle)
+        getTodo(e){
+            this.$store.dispatch('getTodo', e.target.value)
+        },
+        addTodo(){
+            this.$store.dispatch('addTodo')
+            this.$store.dispatch('clearTodo')
+        }
+    },
+    computed: {
+        newTodo(){
+            return this.$store.getters.newTodo
         }
     },
     data() {
