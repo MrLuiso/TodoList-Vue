@@ -1,17 +1,19 @@
 <template>
     <div class="taskDisplay">
-        <task-column columnTitle="ToDo Tasks"></task-column>
-        <task-column columnTitle="Completed Tasks"></task-column>
+        <uncompleted-task-column columnTitle="ToDo Tasks"></uncompleted-task-column>
+        <completed-task-column columnTitle="Completed Tasks"></completed-task-column>
     </div>
 </template>
 
 <script>
-import TaskColumn from './TaskColumn'
+import UncompletedTaskColumn from './UncompletedTaskColumn'
+import CompletedTaskColumn from './CompletedTaskColumn'
 
 export default {
     name: 'TaskDisplay',
     components: {
-        TaskColumn
+        UncompletedTaskColumn,
+        CompletedTaskColumn
     }
 }
 </script>

@@ -5,7 +5,6 @@
                 @change="getTodo"
                 type="text">
         <b-button @click="addTodo" >Add Task</b-button>
-        
     </div>
 </template>
 

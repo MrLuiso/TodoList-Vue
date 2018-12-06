@@ -38,7 +38,8 @@ export const store = new Vuex.Store({
     getters: {
         uncompleteTodos: state => state.todos.filter((todo) => {return !todo.completed}),
         completeTodos: state => state.todos.filter((todo) => {return todo.completed}),
-        newTodo: state => state.newTodo
+        newTodo: state => state.newTodo,
+        todos: state => state.todos
     },
     actions: {
         getTodo({commit}, todo){
