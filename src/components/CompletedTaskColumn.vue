@@ -5,13 +5,13 @@
             <li class="list-group-item" v-for="todo in todos" :key="todo.id">
                 <h3 id="todoBody">{{todo.body}}</h3>
                 <div class="btn-group">
-                    <button type="button" @click="edit(todo)" class="btn btn-default btn-sm">
+                    <button type="button" @click="edit(todo)" class="btn-secundary btn-sm">
                         <span class="glyphicon glyphicon-edit"></span> Edit
                     </button>
-                    <button type="button" @click="complete(todo)" class="btn btn-default btn-sm">
+                    <button type="button" @click="complete(todo)" class="btn-success btn-sm">
                         <span class="glyphicon glyphicon-ok-circle"></span> Not Done
                     </button>
-                    <button type="button" @click="remove(todo)" class="btn btn-default btn-sm">
+                    <button type="button" @click="remove(todo)" class="btn-danger btn-sm">
                         <span class="glyphicon glyphicon-remove-circle"></span> Remove
                     </button>
                 </div>
@@ -71,12 +71,15 @@ export default {
     justify-content: center;
     flex-direction: row;
 }
+button{
+    margin-left: 5px;
+    margin-right: 5px;
+}
 .btn-group{
     float: right;
 }
 .list-group-item{
     margin-left: 20px;
     margin-right: 20px;
-    padding-right: 20px;
 }
 </style>
