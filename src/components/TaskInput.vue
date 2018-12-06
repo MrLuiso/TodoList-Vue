@@ -1,9 +1,12 @@
 <template>
     <div class="taskInput">
         <b-input-group size="lg" class="inputGroup">
-            <b-form-input></b-form-input>
+            <b-form-input placeholder="Input your task"  
+                        v-model="taskTitle"
+                        type="text">
+            </b-form-input>
             <b-input-group-append>
-                <b-btn variant="outline-success">Add Task</b-btn>
+                <b-button @click="displayText" variant="outline-success">Add Task</b-button>
             </b-input-group-append>
         </b-input-group>
     </div>
@@ -11,7 +14,17 @@
 
 <script>
 export default {
-    name: 'TaskInput'
+    name: 'TaskInput',
+    methods: {
+        displayText: function(event) {
+            alert(this.$data.taskTitle)
+        }
+    },
+    data() {
+        return {
+            taskTitle: ''
+        }
+    }
 }
 </script>
 
