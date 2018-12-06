@@ -1,19 +1,20 @@
 <template>
   <div id="app">
     <h1>ToDo App!</h1>
-    <TaskInput></TaskInput>
-    
+    <task-input></task-input>
+    <task-display></task-display>
   </div>
 </template>
 
 <script>
 import TaskInput from './components/TaskInput'
-
+import TaskDisplay from './components/TaskDisplay'
 
 export default {
   name: 'app',
   components: {
-    TaskInput
+    TaskInput,
+    TaskDisplay
   }
 }
 </script>
