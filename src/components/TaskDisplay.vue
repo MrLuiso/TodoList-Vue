@@ -1,7 +1,7 @@
 <template>
     <div class="taskDisplay">
-        <task-column></task-column>
-        <task-column></task-column>
+        <task-column columnTitle="ToDo Tasks"></task-column>
+        <task-column columnTitle="Completed Tasks"></task-column>
     </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .taskDisplay{
     display: flex;
     flex: 1;

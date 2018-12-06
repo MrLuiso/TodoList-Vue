@@ -11,11 +11,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .taskUncheked{
     display: flex;
     flex: 1;
     flex-direction: row;
     justify-content: flex-start;
+    background-color: aqua;
 }
 </style>
